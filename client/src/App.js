@@ -40,9 +40,17 @@ class App extends Component {
       <div className="App">
         <LandingPage />
         <MapComponent onDisplayDetail={this.handleDisplayDetail}/>
-        {this.state.displayDetail && <ProduceDetail onDisplayDetail={this.handleDisplayDetail} />}
+        {this.state.displayDetail &&
+          <ProduceDetail
+            closeModal={this.handleDisplayDetail}
+            isOpen={this.state.displayDetail}
+          />
+        }
         <AddProduceFormButton onAddProduceForm={this.handleAddProduceForm}/>
-        {this.state.displayAddProduceForm && <AddProduceForm onAddProduceForm={this.handleAddProduceForm} isOpen={this.state.displayAddProduceForm}/>}
+        {this.state.displayAddProduceForm &&
+          <AddProduceForm
+            onAddProduceForm={this.handleAddProduceForm} isOpen={this.state.displayAddProduceForm}
+          />}
       </div>
     );
   }
