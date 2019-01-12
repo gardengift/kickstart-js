@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import ReactDOM from "react-dom";
 import { compose, withProps } from "recompose";
 import {
@@ -7,6 +7,8 @@ import {
   GoogleMap,
   Marker
 } from "react-google-maps";
+
+import Button from '@material-ui/core/Button';
 
 const MyMapComponent = compose(
   withProps({
@@ -24,11 +26,20 @@ const MyMapComponent = compose(
   withScriptjs,
   withGoogleMap
 )(props => (
-  <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-    {props.isMarkerShown && (
-      <Marker position={{ lat: -34.397, lng: 150.644 }} />
-    )}
-  </GoogleMap>
+  <Fragment>
+    <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
+      {props.isMarkerShown && (
+        <Marker position={{ lat: -34.397, lng: 150.644 }} />
+      )}
+    </GoogleMap>
+    <div>
+      <Button variant="contained" color="default">
+        +
+      </Button>
+
+    </div>
+
+  </Fragment>
 ));
 
 ReactDOM.render(<MyMapComponent isMarkerShown />, document.getElementById("root"));
