@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormComponent from './FormComponent';
 
 class AddProduceForm extends Component {
 
@@ -9,7 +10,7 @@ class AddProduceForm extends Component {
   render() {
     return (
       <div>
-        ProduceForm
+        <FormComponent />
         <div onClick={this.props.onAddProduceForm}>
         X - close
         </div>
