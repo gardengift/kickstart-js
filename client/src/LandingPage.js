@@ -4,11 +4,14 @@ class LandingPage extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-        Genrosidad de Jardin
+      <div className="landingPage">
+        <div className="landingPageTitle">
+          Genrosidad de Jardin
         </div>
-        <img
+        <div className="landingPageTitleEnglish">
+        GardenGift
+        </div>
+        <img className="landingPageLogo"
       src="https://bootstraplogos.com/wp-content/uploads/edd/2018/07/logo-11.png"
       alt="new"
       />

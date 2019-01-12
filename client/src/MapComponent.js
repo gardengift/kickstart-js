@@ -17,20 +17,20 @@ const MyMapComponent = compose(
     googleMapURL:
     "https://maps.googleapis.com/maps/api/js?key=AIzaSyAox3QKvH-cDvAtzjyclobeTCj2yuKvO2s&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
+    containerElement: <div style={{ height: `600px` }} />,
     mapElement: <div style={{ height: `100%` }} />
   }),
   withScriptjs,
   withGoogleMap
 )(props => (
-  <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-    {props.isMarkerShown && (
-          <Fragment>
-            <Marker position={{ lat: 45.512794, lng: -122.679565 }} />
-            <Marker position={{ lat: 45.512044, lng: -122.683526 }} />
-            <Marker position={{ lat: 45.512052, lng: -122.680916 }} />
-        </Fragment>
-      )}
+  <GoogleMap defaultZoom={14} defaultCenter={{ lat: 45.5135, lng: -122.6611 }}>
+  {props.isMarkerShown && (
+    <Fragment>
+      <Marker position={{ lat: 45.5135, lng: -122.6501 }} />
+      <Marker position={{ lat: 45.5235, lng: -122.6481 }} />
+      <Marker position={{ lat: 45.5195, lng: -122.6551 }} />
+    </Fragment>
+  )}
   </GoogleMap>
 ));
 
@@ -38,8 +38,6 @@ class MapComponent extends Component {
   constructor(props) {
     super(props);
   }
-
-
 
   render() {
     return (
