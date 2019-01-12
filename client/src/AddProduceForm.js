@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormComponent from './FormComponent';
 
 class AddProduceForm extends Component {
 
@@ -8,13 +9,8 @@ class AddProduceForm extends Component {
 
   render() {
     return (
-      <div className="produceForm">
-        ProduceForm
-        <div className="closeIconContainer">
-          <div onClick={this.props.onAddProduceForm}>
-            X - close
-          </div>
-        </div>
+      <div>
+        <FormComponent isOpen={this.props.isOpen} closeModal={this.props.onAddProduceForm}/>
       </div>
     );
   }
