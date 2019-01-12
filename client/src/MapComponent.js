@@ -23,14 +23,14 @@ const MyMapComponent = compose(
   withScriptjs,
   withGoogleMap
 )(props => (
-  <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-    {props.isMarkerShown && (
-          <Fragment>
-            <Marker position={{ lat: 45.512794, lng: -122.679565 }} />
-            <Marker position={{ lat: 45.512044, lng: -122.683526 }} />
-            <Marker position={{ lat: 45.512052, lng: -122.680916 }} />
-        </Fragment>
-      )}
+  <GoogleMap defaultZoom={14} defaultCenter={{ lat: 45.5135, lng: -122.6611 }}>
+  {props.isMarkerShown && (
+    <Fragment>
+      <Marker position={{ lat: 45.5135, lng: -122.6501 }} />
+      <Marker position={{ lat: 45.5235, lng: -122.6481 }} />
+      <Marker position={{ lat: 45.5195, lng: -122.6551 }} />
+    </Fragment>
+  )}
   </GoogleMap>
 ));
 
@@ -38,8 +38,6 @@ class MapComponent extends Component {
   constructor(props) {
     super(props);
   }
-
-
 
   render() {
     return (
