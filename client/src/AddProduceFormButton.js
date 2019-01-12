@@ -7,11 +7,10 @@ class AddProduceFormButton extends Component {
     super(props);
   }
 
-
   render() {
     return (
       <div>
-        <Button variant="contained" color="default" onClick={this.props.onAddProduceForm} style={{marginTop: 20, width: 200}}>
+        <Button variant="contained" color="default" onClick={this.props.onAddProduceForm} style={{marginTop: 20, marginBottom: 100, width: 200}}>
           +
         </Button>
       </div>
