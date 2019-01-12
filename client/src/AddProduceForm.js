@@ -10,10 +10,7 @@ class AddProduceForm extends Component {
   render() {
     return (
       <div>
-        <FormComponent />
-        <div onClick={this.props.onAddProduceForm}>
-        X - close
-        </div>
+        <FormComponent isOpen={this.props.isOpen} closeModal={this.props.onAddProduceForm}/>
       </div>
     );
   }
