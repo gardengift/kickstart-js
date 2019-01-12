@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import logo from './logo.png';
+
 class LandingPage extends Component {
 
   render() {
@@ -11,10 +13,13 @@ class LandingPage extends Component {
         <div className="landingPageTitleEnglish">
         GardenGift
         </div>
-        <img className="landingPageLogo"
-      src="https://bootstraplogos.com/wp-content/uploads/edd/2018/07/logo-11.png"
-      alt="new"
-      />
+        <div className="landingPageLogoContainer">
+          <img className="landingPageLogo"
+            src={logo}
+            alt="new"
+          />
+
+        </div>
       </div>
     );
   }
